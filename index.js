@@ -20,6 +20,12 @@ fetch(URL)
     li.appendChild(textNode);
     li.appendChild(btn);
     document.getElementById("forecastContainer").appendChild(li);
+    btn.addEventListener("click",()=>{
+      document.getElementById("forecastContainer").removeChild(li)
+      textNode = document.createTextNode(`high temp: ${maxTempC} low temp:${lowTempC}`)
+      li.appendChild(textNode);
+      document.getElementById("forecastContainer").appendChild(li);
+    });
   })
   
 });

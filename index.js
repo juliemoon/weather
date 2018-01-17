@@ -15,11 +15,15 @@ fetch(URL)
   console.log(sevendays)
   sevendays.map((day)=>{
     let li = createEl("li");
+    let btn = createEl("button");
+    btn.innerHTML = 'C';
     let maxTempF = day.maxTempF;
     let lowTempF = day.minTempF;
-    let textNode = document.createTextNode(`high temp: ${maxTempF} low temp:${lowTempF}`);
-    console.log(textNode);
+    let maxTempC = day.maxTempC;
+    let lowTempC = day.minTempC;
+    let textNode = document.createTextNode(`high temp: ${maxTempF}F low temp:${lowTempF}F`);
     li.appendChild(textNode);
+    li.appendChild(btn);
     document.getElementById("forecastContainer").appendChild(li);
   })
   

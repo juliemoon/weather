@@ -4,15 +4,10 @@ function createEl(el){
   return document.createElement(el);
 }
 
-function appendEl(parent,el){
-  return parent.appendChild(el);
-}
-
 fetch(URL)
 .then((resp)=> resp.json())
 .then((data)=> {
   let sevendays = data.response[0].periods;
-  console.log(sevendays)
   sevendays.map((day)=>{
     let li = createEl("li");
     let btn = createEl("button");
@@ -28,3 +23,9 @@ fetch(URL)
   })
   
 });
+
+let btn = document.querySelector("button");
+btn.addEventListener("click", ()=>{
+
+})
+
